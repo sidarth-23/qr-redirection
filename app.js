@@ -61,3 +61,26 @@ function startRedirect(config) {
     window.location.href = destination;
   }, delay);
 }
+
+function renderNotFound(config = {}) {
+  const {
+    title = "Not Found",
+    description = "The page you requested does not exist.",
+    badge = "404",
+  } = config;
+
+  document.title = title;
+
+  const app = document.getElementById("app");
+  app.innerHTML = `
+    <main class="card">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        <span>${badge}</span>
+      </div>
+
+      <h1>${title}</h1>
+      <p>${description}</p>
+    </main>
+  `;
+}

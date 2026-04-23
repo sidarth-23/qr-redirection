@@ -3,17 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Not Found</title>
+    <title>Redirecting...</title>
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <div id="app"></div>
     <script src="/app.js"></script>
     <script>
-      renderNotFound({
-        title: "Not Found",
-        description: "The page you requested does not exist.",
-        badge: "404"
+      startRedirect({
+        title: "Opening Location",
+        description: "Please wait while we redirect you.",
+        destination: "https://share.google/a37ahAESAFbO4Qr7o",
+        delay: 650,
+        badge: "Verified destination"
       });
     </script>
   </body>
